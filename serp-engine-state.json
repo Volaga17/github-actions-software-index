@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "probeId": "PROBE_001_GITHUB_ACTIONS_TOOL_INDEX",
+  "cohort": "COHORT_001",
+  "launchGateVerdict": "APPROVE",
+  "pipelineStatus": "BUILDING",
+  "buildStatus": "BUILD_READY",
+  "deployment": {
+    "status": "BLOCKED_CREDENTIALS",
+    "publicUrl": null,
+    "provider": null,
+    "costEur": 0,
+    "blockers": [
+      "NO_GIT_REMOTE",
+      "NO_HOSTING_CREDENTIALS"
+    ]
+  },
+  "searchConsole": {
+    "status": "PENDING",
+    "property": null,
+    "blockers": [
+      "NO_PUBLIC_URL",
+      "NO_SEARCH_CONSOLE_CREDENTIALS"
+    ]
+  },
+  "build": {
+    "toolPages": 30,
+    "indexablePages": 32,
+    "htmlPages": 33,
+    "sourceImages": 18,
+    "sourceCommit": "bac22751eb7d886e12c6063685275299469e9e5b",
+    "sourceFetchedAt": "2026-09-12T15:13:57.847Z",
+    "verifiedAt": "2026-09-12T19:13:42Z"
+  },
+  "transitions": [
+    {
+      "status": "APPROVED",
+      "basis": "Human Launch Gate approval"
+    },
+    {
+      "status": "BUILDING",
+      "basis": "Independent Probe implementation started"
+    },
+    {
+      "status": "BUILD_READY",
+      "basis": "Remote refresh, typecheck, tests, static build, link QA and visual QA passed"
+    }
+  ],
+  "nextAllowedTransition": "DEPLOYING",
+  "expansionAllowed": false
+}
