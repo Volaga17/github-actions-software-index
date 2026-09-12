@@ -9,6 +9,8 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const catalog = JSON.parse(await readFile(join(root, "config", "tool-catalog.json"), "utf8"));
 const dataset = JSON.parse(await readFile(join(root, "data", "normalized-images.json"), "utf8"));
 const probe = JSON.parse(await readFile(join(root, "src", "data", "probe.json"), "utf8"));
+const deploy = JSON.parse(await readFile(join(root, "deploy.config.json"), "utf8"));
+const state = JSON.parse(await readFile(join(root, "serp-engine-state.json"), "utf8"));
 
 test("parses the official image table without a hard-coded image list", () => {
   const markdown = `## Available Images
@@ -77,6 +79,12 @@ test("build dataset has no duplicate or empty tool pages", () => {
   assert.ok(probe.tools.every((tool) => tool.listedImageCount >= 2));
   assert.ok(probe.tools.every((tool) => tool.availability.some((row) => row.available && row.versions.length > 0)));
   assert.ok(dataset.images.every((image) => image.imageVersion && image.sourceUrl.includes(dataset.source.commit)));
+});
+
+test("keeps generated, deployment and persisted build states aligned", () => {
+  assert.equal(probe.probe.status, "BUILD_READY");
+  assert.equal(probe.probe.status, deploy.status);
+  assert.equal(probe.probe.status, state.buildStatus);
 });
 
 test("detects when a tool disappears from an image", () => {

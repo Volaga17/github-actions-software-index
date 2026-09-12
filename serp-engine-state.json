@@ -3,7 +3,7 @@
   "probeId": "PROBE_001_GITHUB_ACTIONS_TOOL_INDEX",
   "cohort": "COHORT_001",
   "launchGateVerdict": "APPROVE",
-  "pipelineStatus": "BUILDING",
+  "pipelineStatus": "BUILD_READY",
   "buildStatus": "BUILD_READY",
   "deployment": {
     "status": "BLOCKED_CREDENTIALS",
