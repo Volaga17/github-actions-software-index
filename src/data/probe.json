@@ -11,7 +11,7 @@
   "source": {
     "repository": "actions/runner-images",
     "commit": "bac22751eb7d886e12c6063685275299469e9e5b",
-    "committedAt": "2026-09-11T12:04:51-04:00",
+    "committedAt": "2026-09-11T16:04:51Z",
     "fetchedAt": "2026-09-12T15:13:57.847Z",
     "repositoryUrl": "https://github.com/actions/runner-images",
     "license": "MIT",

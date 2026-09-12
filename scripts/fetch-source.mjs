@@ -17,6 +17,10 @@ function checksum(content) {
   return createHash("sha256").update(content).digest("hex");
 }
 
+function normalizedTimestamp(value) {
+  return new Date(value).toISOString().replace(".000Z", "Z");
+}
+
 async function fetchText(url) {
   const response = await fetch(url, { headers: { "User-Agent": "serp-engine-probe/1.0" } });
   if (!response.ok) throw new Error(`Source fetch failed (${response.status}): ${url}`);
@@ -29,7 +33,7 @@ async function remoteRevision() {
   });
   if (!response.ok) throw new Error(`Unable to resolve runner-images revision (${response.status})`);
   const payload = await response.json();
-  return { commit: payload.sha, committedAt: payload.commit.committer.date };
+  return { commit: payload.sha, committedAt: normalizedTimestamp(payload.commit.committer.date) };
 }
 
 async function sourceText(path, commit) {
@@ -40,7 +44,7 @@ async function sourceText(path, commit) {
 const revision = localSourceDirectory
   ? {
       commit: execFileSync("git", ["-C", localSourceDirectory, "rev-parse", "HEAD"], { encoding: "utf8" }).trim(),
-      committedAt: execFileSync("git", ["-C", localSourceDirectory, "log", "-1", "--format=%cI"], { encoding: "utf8" }).trim(),
+      committedAt: normalizedTimestamp(execFileSync("git", ["-C", localSourceDirectory, "log", "-1", "--format=%cI"], { encoding: "utf8" }).trim()),
     }
   : await remoteRevision();
 
