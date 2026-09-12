@@ -27,7 +27,7 @@ Set `RUNNER_IMAGES_REF` to refresh from a particular official revision. For offl
 
 ## Deployment and Search Console
 
-Set `SITE_URL` to the final HTTPS origin before the production build. `GOOGLE_SITE_VERIFICATION` is optional and adds the Search Console verification tag. Search Console remains `PENDING` until a deployed public URL and Google credentials are available; no metrics are simulated.
+The Probe is deployed at <https://volaga17.github.io/github-actions-software-index/> from its dedicated public repository. `SITE_URL` and `BASE_PATH` configure the GitHub Pages origin; `GOOGLE_SITE_VERIFICATION` adds the Search Console verification tag. The property is verified and the sitemap is submitted. No Search Console metrics are simulated while Google processes the new property.
 
 The site includes privacy-neutral metric hooks (`data-metric="OUTBOUND_SOURCE_CLICK"`) but does not send data to a third party. Search Console is the primary demand signal for the Probe.
 

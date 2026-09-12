@@ -3,30 +3,36 @@
   "probeId": "PROBE_001_GITHUB_ACTIONS_TOOL_INDEX",
   "cohort": "COHORT_001",
   "launchGateVerdict": "APPROVE",
-  "pipelineStatus": "BUILD_READY",
+  "pipelineStatus": "WARMING",
   "buildStatus": "BUILD_READY",
   "deployment": {
-    "status": "BLOCKED_CREDENTIALS",
-    "publicUrl": null,
-    "provider": null,
+    "status": "DEPLOYED",
+    "provider": "GITHUB_PAGES",
+    "repositoryUrl": "https://github.com/Volaga17/github-actions-software-index",
+    "publicUrl": "https://volaga17.github.io/github-actions-software-index/",
+    "deploymentId": "6413765130",
+    "deployedAt": "2026-09-12T19:57:04Z",
+    "verificationDeploymentId": "6413825587",
     "costEur": 0,
-    "blockers": [
-      "NO_GIT_REMOTE",
-      "NO_HOSTING_CREDENTIALS"
-    ]
+    "blockers": []
   },
   "searchConsole": {
-    "status": "PENDING",
-    "property": null,
-    "blockers": [
-      "NO_PUBLIC_URL",
-      "NO_SEARCH_CONSOLE_CREDENTIALS"
-    ]
+    "status": "CONNECTED",
+    "property": "https://volaga17.github.io/github-actions-software-index/",
+    "verificationMethod": "HTML_TAG",
+    "verifiedDate": "2026-09-12",
+    "sitemapUrl": "https://volaga17.github.io/github-actions-software-index/sitemap.xml",
+    "sitemapStatus": "SUBMITTED_FETCH_PENDING",
+    "sitemapSubmittedDate": "2026-09-12",
+    "sitemapDetail": "Google accepted the submission, then reported that it could not yet read the newly deployed sitemap; direct public checks return HTTP 200 and valid XML.",
+    "blockers": []
   },
   "build": {
     "toolPages": 30,
+    "initialPageCount": 33,
     "indexablePages": 32,
     "htmlPages": 33,
+    "initialDataVersion": "actions-runner-images@bac22751eb7d886e12c6063685275299469e9e5b",
     "sourceImages": 18,
     "sourceCommit": "bac22751eb7d886e12c6063685275299469e9e5b",
     "sourceFetchedAt": "2026-09-12T15:13:57.847Z",
@@ -44,8 +50,42 @@
     {
       "status": "BUILD_READY",
       "basis": "Remote refresh, typecheck, tests, static build, link QA and visual QA passed"
+    },
+    {
+      "status": "REMOTE_READY",
+      "at": "2026-09-12T19:55:17Z",
+      "basis": "Dedicated public repository contains only the independent Probe"
+    },
+    {
+      "status": "DEPLOYING",
+      "at": "2026-09-12T19:55:17Z",
+      "basis": "GitHub Pages workflow started from the dedicated repository"
+    },
+    {
+      "status": "DEPLOYED",
+      "at": "2026-09-12T19:57:04Z",
+      "basis": "GitHub Pages deployment succeeded and public production smoke tests passed"
+    },
+    {
+      "status": "WARMING",
+      "at": "2026-09-12T19:57:04Z",
+      "basis": "The first real public observation window started; no SEO decision has been made"
     }
   ],
-  "nextAllowedTransition": "DEPLOYING",
-  "expansionAllowed": false
+  "generatorValidation": {
+    "SEARCH": "VALIDATED",
+    "STRUCTURE": "VALIDATED",
+    "DESTROY": "VALIDATED",
+    "SELECT": "VALIDATED",
+    "HUMAN_APPROVAL": "VALIDATED",
+    "BUILD": "VALIDATED",
+    "QA": "VALIDATED",
+    "DEPLOY": "VALIDATED",
+    "WARMING": "VALIDATED",
+    "SEARCH_CONSOLE": "PARTIAL",
+    "SUPABASE": "NOT_VALIDATED"
+  },
+  "nextAllowedTransition": "EVALUABLE_AFTER_OBSERVATION_WINDOW",
+  "expansionAllowed": false,
+  "seoDecision": null
 }

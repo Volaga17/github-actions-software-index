@@ -6,7 +6,7 @@ import { readJson, readJsonIfPresent, writeJson } from "./lib/files.mjs";
 const root = fileURLToPath(new URL("..", import.meta.url));
 const config = await readJson(join(root, "probe.config.json"));
 const seo = await readJson(join(root, "seo.config.json"));
-const deploy = await readJson(join(root, "deploy.config.json"));
+const state = await readJson(join(root, "serp-engine-state.json"));
 const catalog = await readJson(join(root, "config", "tool-catalog.json"));
 const dataset = await readJson(join(root, "data", "normalized-images.json"));
 const outputPath = join(root, "src", "data", "probe.json");
@@ -87,7 +87,7 @@ const probe = {
     id: config.probeId,
     cohort: config.cohort,
     name: config.name,
-    status: deploy.status,
+    status: state.pipelineStatus,
     toolPageCount: selected.length,
     indexablePageCount: selected.length + 2,
   },

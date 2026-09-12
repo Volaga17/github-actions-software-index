@@ -81,10 +81,12 @@ test("build dataset has no duplicate or empty tool pages", () => {
   assert.ok(dataset.images.every((image) => image.imageVersion && image.sourceUrl.includes(dataset.source.commit)));
 });
 
-test("keeps generated, deployment and persisted build states aligned", () => {
-  assert.equal(probe.probe.status, "BUILD_READY");
-  assert.equal(probe.probe.status, deploy.status);
-  assert.equal(probe.probe.status, state.buildStatus);
+test("keeps lifecycle, build and deployment states explicit", () => {
+  assert.equal(probe.probe.status, "WARMING");
+  assert.equal(probe.probe.status, state.pipelineStatus);
+  assert.equal(state.buildStatus, "BUILD_READY");
+  assert.equal(deploy.status, "DEPLOYED");
+  assert.equal(deploy.status, state.deployment.status);
 });
 
 test("detects when a tool disappears from an image", () => {

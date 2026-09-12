@@ -1,14 +1,15 @@
 {
   "strategy": "FREE_STATIC_HOST",
-  "status": "BUILD_READY",
+  "status": "DEPLOYED",
+  "provider": "GITHUB_PAGES",
+  "repositoryUrl": "https://github.com/Volaga17/github-actions-software-index",
+  "publicUrl": "https://volaga17.github.io/github-actions-software-index/",
+  "deploymentId": "6413765130",
+  "deployedAt": "2026-09-12T19:57:04Z",
   "buildCommand": "npm run pipeline",
   "outputDirectory": "dist",
   "requiredEnvironment": ["SITE_URL"],
   "optionalEnvironment": ["GOOGLE_SITE_VERIFICATION"],
   "costCeilingEur": 0,
-  "blockers": [
-    "NO_GIT_REMOTE",
-    "NO_HOSTING_CREDENTIALS",
-    "NO_SEARCH_CONSOLE_CREDENTIALS"
-  ]
+  "blockers": []
 }

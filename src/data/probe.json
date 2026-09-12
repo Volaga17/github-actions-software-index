@@ -4,7 +4,7 @@
     "id": "PROBE_001_GITHUB_ACTIONS_TOOL_INDEX",
     "cohort": "COHORT_001",
     "name": "Runner Image Index",
-    "status": "BUILD_READY",
+    "status": "WARMING",
     "toolPageCount": 30,
     "indexablePageCount": 32
   },
