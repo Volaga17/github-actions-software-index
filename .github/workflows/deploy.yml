@@ -25,6 +25,7 @@ jobs:
         env:
           SITE_URL: https://volaga17.github.io
           BASE_PATH: /github-actions-software-index
+          GOOGLE_SITE_VERIFICATION: MCo3FjNoRcbTZEXmelTLpVQneK2LPnUNvHhy0f_Jtlw
 
   deploy:
     needs: build
