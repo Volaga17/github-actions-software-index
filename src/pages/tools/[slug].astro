@@ -1,0 +1,106 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import probe from "../../data/probe.json";
+
+export const getStaticPaths = (() => probe.tools.map((tool) => ({
+  params: { slug: tool.slug },
+  props: { tool },
+}))) satisfies GetStaticPaths;
+
+const { tool } = Astro.props;
+const listed = tool.availability.filter((row: (typeof tool.availability)[number]) => row.available);
+const missing = tool.availability.filter((row: (typeof tool.availability)[number]) => !row.available);
+const checkedAt = new Date(probe.source.fetchedAt).toLocaleDateString("en-GB", { dateStyle: "long", timeZone: "UTC" });
+const versionGroups = Object.entries(Object.groupBy(listed, (row: (typeof listed)[number]) => row.versions.join(", ")))
+  .map(([versions, rows]) => ({ versions, images: rows?.map((row) => row.imageName) ?? [] }))
+  .sort((left, right) => right.images.length - left.images.length);
+const title = `${tool.canonicalName} on GitHub Actions runners`;
+const description = `${tool.canonicalName} is listed on ${tool.listedImageCount} of ${tool.totalImageCount} official GitHub Actions runner images. Compare versions, architectures and source manifests.`;
+---
+
+<BaseLayout title={title} description={description} canonicalPath={`/tools/${tool.slug}/`}>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Tools</a><span aria-hidden="true">/</span><span aria-current="page">{tool.canonicalName}</span>
+  </nav>
+
+  <article>
+    <header class="tool-hero">
+      <div>
+        <p class="eyebrow">{tool.family.replaceAll("-", " ")}</p>
+        <h1>Is {tool.canonicalName} preinstalled on GitHub Actions runners?</h1>
+        <p class="direct-answer"><strong>Yes — it is listed on {tool.listedImageCount} of {tool.totalImageCount} documented images.</strong> The table below distinguishes exact image and architecture combinations.</p>
+      </div>
+      <aside class="freshness-card" aria-label="Freshness">
+        <span>Last checked</span>
+        <strong>{checkedAt}</strong>
+        <span>Image source revision</span>
+        <code>{probe.source.commit.slice(0, 12)}</code>
+      </aside>
+    </header>
+
+    <section aria-labelledby="matrix-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Availability matrix</p><h2 id="matrix-title">Images and versions</h2></div>
+        <span class="result-count">{listed.length} listed · {missing.length} not listed</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Image</th><th>Status</th><th>Version(s)</th><th>Image release</th><th>Checked</th><th>Source</th></tr></thead>
+          <tbody>
+            {tool.availability.map((row: (typeof tool.availability)[number]) => (
+              <tr class:list={{ "not-listed": !row.available }}>
+                <td><strong>{row.imageName}</strong><small>{row.architecture} · {row.labels.join(", ") || "no public label"}</small></td>
+                <td><span class:list={["status", row.available ? "listed" : "missing"]}>{row.available ? "Listed" : "Not listed"}</span>{row.lifecycle !== "ga" && <small>{row.lifecycle}</small>}</td>
+                <td>{row.available ? row.versions.join(", ") : "—"}</td>
+                <td><code>{row.imageVersion}</code></td>
+                <td><time datetime={row.fetchedAt}>{new Date(row.fetchedAt).toLocaleDateString("en-GB", { timeZone: "UTC" })}</time></td>
+                <td><a href={row.sourceUrl} rel="external" data-metric="OUTBOUND_SOURCE_CLICK">Manifest ↗</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Not listed means no matching entry was found in that official manifest. It does not prove the binary cannot be installed during a job.</p>
+    </section>
+
+    <div class="two-column">
+      <section aria-labelledby="differences-title">
+        <p class="eyebrow">Image differences</p>
+        <h2 id="differences-title">Observed version groups</h2>
+        <div class="version-groups">
+          {versionGroups.map((group) => (
+            <div><code>{group.versions}</code><p>{group.images.join(" · ")}</p></div>
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="verify-title">
+        <p class="eyebrow">Verification</p>
+        <h2 id="verify-title">Check inside a workflow</h2>
+        <pre><code>{`- name: Check ${tool.canonicalName}\n  run: ${tool.verifyCommand}`}</code></pre>
+        <p>Use a fixed runner label when reproducibility matters, and inspect the <em>Set up job</em> log for the image actually assigned.</p>
+      </section>
+    </div>
+
+    <section class="provenance" aria-labelledby="provenance-title">
+      <p class="eyebrow">Provenance</p>
+      <h2 id="provenance-title">How this answer was produced</h2>
+      <p>Canonical name: <strong>{tool.canonicalName}</strong>. Matched source names: {[...new Set(listed.flatMap((row) => row.sourceNames))].join(", ")}. Aliases used only for discovery: {tool.aliases.length ? tool.aliases.join(", ") : "none"}. Facts were parsed from GitHub’s MIT-licensed manifests; no third-party inventory was used.</p>
+      <div class="link-row">
+        <a class="text-link" href={probe.source.repositoryUrl} rel="external" data-metric="OUTBOUND_SOURCE_CLICK">Official repository ↗</a>
+        <a class="text-link" href="/methodology/">Methodology →</a>
+      </div>
+    </section>
+
+    {tool.relatedTools.length > 0 && (
+      <section aria-labelledby="related-title">
+        <p class="eyebrow">Same family</p>
+        <h2 id="related-title">Related tools</h2>
+        <div class="related-links">
+          {tool.relatedTools.map((related) => <a href={`/tools/${related.slug}/`}>{related.canonicalName} →</a>)}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import probe from "../data/probe.json";
+
+const checkedAt = new Date(probe.source.fetchedAt).toLocaleString("en-GB", { dateStyle: "long", timeStyle: "short", timeZone: "UTC" });
+---
+
+<BaseLayout
+  title="Methodology — Runner Image Index"
+  description="How Runner Image Index fetches, normalizes, selects and verifies software data from official GitHub Actions runner manifests."
+  canonicalPath="/methodology/"
+>
+  <article class="methodology">
+    <p class="eyebrow">Transparent by design</p>
+    <h1>Methodology</h1>
+    <p class="lede">This site reorganizes official GitHub runner image manifests from <em>image → software</em> into <em>tool → images and versions</em>. It does not replace GitHub’s documentation.</p>
+
+    <section>
+      <h2>Source and licence</h2>
+      <p>The only inventory source is <a href={probe.source.repositoryUrl} rel="external">actions/runner-images</a>, pinned to commit <a href={`${probe.source.repositoryUrl}/commit/${probe.source.commit}`} rel="external"><code>{probe.source.commit}</code></a>. The repository is distributed under the <a href={probe.source.licenseUrl} rel="external">MIT licence</a>. This site republishes structured facts and links to the original manifests rather than copying their explanatory text.</p>
+    </section>
+
+    <section>
+      <h2>Refresh pipeline</h2>
+      <ol class="pipeline-list">
+        <li><strong>Fetch</strong><span>Resolve an official commit, derive the current image list from the repository README, verify the licence, download each linked manifest and store checksums.</span></li>
+        <li><strong>Normalize</strong><span>Map exact source names and explicitly configured aliases to canonical tools without fuzzy merging.</span></li>
+        <li><strong>Validate</strong><span>Require source URLs pinned to a full commit, image versions, checksums, real versions and Ubuntu/Windows/macOS coverage.</span></li>
+        <li><strong>Generate</strong><span>Score eligible tools using query evidence, CI utility, image frequency, OS coverage and observed version variability; select exactly 30.</span></li>
+        <li><strong>Build</strong><span>Generate static HTML, canonical URLs, sitemap and robots directives.</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Selection, not filler</h2>
+      <p>{probe.selection.candidateCount} tools met the minimum evidence rule; {probe.selection.selectedCount} were selected. The score uses: {probe.selection.method}. A tool must be listed in at least two official image manifests. Obscure single-image entries cannot enter merely to fill the page count.</p>
+    </section>
+
+    <section>
+      <h2>Meaning of availability</h2>
+      <p><strong>Listed</strong> means a configured exact source name and at least one version were found in the pinned manifest. <strong>Not listed</strong> means the parser found no such entry. It does not mean the tool is impossible to install or absent from every executable path.</p>
+      <p>GitHub deploys image updates progressively. The repository’s default branch reflects the completed rollout, while a job log identifies the image actually used by a specific run. Use fixed labels and verify inside the workflow for high-stakes reproducibility.</p>
+    </section>
+
+    <section>
+      <h2>Freshness and change detection</h2>
+      <p>The current source was fetched at <time datetime={probe.source.fetchedAt}>{checkedAt}</time>. Re-running the pipeline on the same commit preserves this timestamp and produces the same dataset. When the source commit changes, the generator records tool additions, removals and version changes against the previous generated snapshot.</p>
+    </section>
+
+    <section>
+      <h2>Limits and corrections</h2>
+      <ul>
+        <li>The site reports manifests, not live measurements of each assigned VM.</li>
+        <li>Aliases are explicit and conservative; similarly named tools are not merged automatically.</li>
+        <li>A manifest format change stops validation instead of silently publishing empty pages.</li>
+        <li>The initial Probe is intentionally capped at 30 tool pages until real search data exists.</li>
+      </ul>
+      <p>To report an error, open an issue in the <a href={`${probe.source.repositoryUrl}/issues`} rel="external">official runner-images repository</a> when the source itself is wrong. If this index parsed a correct source incorrectly, use the repository that hosts this Probe once it becomes public.</p>
+    </section>
+  </article>
+</BaseLayout>

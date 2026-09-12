@@ -1,0 +1,25 @@
+{
+  "probeId": "PROBE_001_GITHUB_ACTIONS_TOOL_INDEX",
+  "cohort": "COHORT_001",
+  "name": "Runner Image Index",
+  "targetToolPageCount": 30,
+  "minimumToolPageCount": 20,
+  "maximumToolPageCount": 40,
+  "source": {
+    "repository": "actions/runner-images",
+    "defaultRef": "main",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/actions/runner-images/blob/main/LICENSE",
+    "documentationUrl": "https://docs.github.com/en/actions/concepts/runners/github-hosted-runners"
+  },
+  "selection": {
+    "minimumImageOccurrences": 2,
+    "weights": {
+      "queryEvidence": 20,
+      "ciUtility": 8,
+      "imageOccurrence": 2,
+      "operatingSystemCoverage": 4,
+      "versionVariability": 3
+    }
+  }
+}

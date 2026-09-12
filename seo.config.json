@@ -1,0 +1,11 @@
+{
+  "siteName": "Runner Image Index",
+  "titleTemplate": "%s on GitHub Actions runners",
+  "defaultDescription": "Compare software versions listed in official GitHub Actions runner image manifests.",
+  "language": "en",
+  "robots": {
+    "index": true,
+    "follow": true
+  },
+  "searchConsoleStatus": "PENDING"
+}

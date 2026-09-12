@@ -1,0 +1,14 @@
+{
+  "strategy": "FREE_STATIC_HOST",
+  "status": "BUILD_READY",
+  "buildCommand": "npm run pipeline",
+  "outputDirectory": "dist",
+  "requiredEnvironment": ["SITE_URL"],
+  "optionalEnvironment": ["GOOGLE_SITE_VERIFICATION"],
+  "costCeilingEur": 0,
+  "blockers": [
+    "NO_GIT_REMOTE",
+    "NO_HOSTING_CREDENTIALS",
+    "NO_SEARCH_CONSOLE_CREDENTIALS"
+  ]
+}

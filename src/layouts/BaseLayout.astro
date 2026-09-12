@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import probe from "../data/probe.json";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+}
+
+const { title, description, canonicalPath } = Astro.props;
+const canonical = new URL(canonicalPath, Astro.site);
+const verification = import.meta.env.GOOGLE_SITE_VERIFICATION;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#07111f" />
+    {verification && <meta name="google-site-verification" content={verification} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={probe.seo.siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Runner Image Index home">
+        <span class="brand-mark" aria-hidden="true">R/</span>
+        <span>Runner Image Index</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Tools</a>
+        <a href="/methodology/">Methodology</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>Independent index built from official <a href={probe.source.repositoryUrl} rel="external">GitHub runner image manifests</a>.</p>
+      <p>Source revision <code>{probe.source.commit.slice(0, 12)}</code> · synced <time datetime={probe.source.fetchedAt}>{new Date(probe.source.fetchedAt).toLocaleDateString("en-GB", { dateStyle: "medium", timeZone: "UTC" })}</time></p>
+    </footer>
+  </body>
+</html>

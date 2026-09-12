@@ -1,0 +1,5825 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "actions/runner-images",
+    "commit": "bac22751eb7d886e12c6063685275299469e9e5b",
+    "committedAt": "2026-09-11T16:04:51Z",
+    "fetchedAt": "2026-09-12T15:13:57.847Z",
+    "repositoryUrl": "https://github.com/actions/runner-images",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/LICENSE"
+  },
+  "images": [
+    {
+      "id": "ubuntu-26.04",
+      "name": "Ubuntu 26.04",
+      "architecture": "x64",
+      "labels": [
+        "ubuntu-26.04"
+      ],
+      "lifecycle": "preview",
+      "osVersion": "26.04.1 LTS",
+      "imageVersion": "20260907.131.1",
+      "sourcePath": "images/ubuntu/Ubuntu2604-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu/Ubuntu2604-Readme.md",
+      "sourceSha256": "56e8de314b70d1891cbf2bc8d5883a8dfe08cc69807564944633fb3aacfa0357",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.21",
+            "3.11.16",
+            "3.12.14",
+            "3.13.15",
+            "3.14.4",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+9",
+            "17.0.20+1",
+            "21.0.12+1",
+            "25.0.4+1"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.8",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.4"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client",
+            "Docker Server"
+          ],
+          "versions": [
+            "29.4.2"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.37.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "5.1.3"
+          ]
+        },
+        {
+          "slug": "podman",
+          "available": true,
+          "sourceNames": [
+            "Podman"
+          ],
+          "versions": [
+            "5.7.0"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "4.2.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "minikube",
+          "available": true,
+          "sourceNames": [
+            "Minikube"
+          ],
+          "versions": [
+            "1.39.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "583.0.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "ansible",
+          "available": true,
+          "sourceNames": [
+            "Ansible"
+          ],
+          "versions": [
+            "2.21.3"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.15"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.82"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0"
+          ]
+        },
+        {
+          "slug": "postgresql",
+          "available": true,
+          "sourceNames": [
+            "PostgreSQL"
+          ],
+          "versions": [
+            "18.6"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.4.11-0ubuntu0.26.04.1"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.19.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-26.04-arm64",
+      "name": "Ubuntu 26.04 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "ubuntu-26.04-arm"
+      ],
+      "lifecycle": "preview",
+      "osVersion": "26.04.1 LTS",
+      "imageVersion": "20260907.118.1",
+      "sourcePath": "images/ubuntu/Ubuntu2604-Arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu/Ubuntu2604-Arm64-Readme.md",
+      "sourceSha256": "2a37527228f85bc289e75faed567ea2b33b048dc4f2fcf93d9e9b364cee396bf",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.21",
+            "3.11.16",
+            "3.12.14",
+            "3.13.15",
+            "3.14.4",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+9",
+            "17.0.20+1",
+            "21.0.12+1",
+            "25.0.4+1"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.8",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.4"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client",
+            "Docker Server"
+          ],
+          "versions": [
+            "29.4.2"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.37.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "5.1.3"
+          ]
+        },
+        {
+          "slug": "podman",
+          "available": true,
+          "sourceNames": [
+            "Podman"
+          ],
+          "versions": [
+            "5.7.0"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "4.2.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "minikube",
+          "available": true,
+          "sourceNames": [
+            "Minikube"
+          ],
+          "versions": [
+            "1.39.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "583.0.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "ansible",
+          "available": true,
+          "sourceNames": [
+            "Ansible"
+          ],
+          "versions": [
+            "2.21.3"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.15"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0"
+          ]
+        },
+        {
+          "slug": "postgresql",
+          "available": true,
+          "sourceNames": [
+            "PostgreSQL"
+          ],
+          "versions": [
+            "18.6"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.4.11-0ubuntu0.26.04.1"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.19.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-24.04",
+      "name": "Ubuntu 24.04",
+      "architecture": "x64",
+      "labels": [
+        "ubuntu-latest",
+        "ubuntu-24.04"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "24.04.5 LTS",
+      "imageVersion": "20260907.300.1",
+      "sourcePath": "images/ubuntu/Ubuntu2404-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu/Ubuntu2404-Readme.md",
+      "sourceSha256": "4edbefde1df512f024363b1f66f78448f944f071c9e1775056b220d5bdc8dc81",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.21",
+            "3.11.16",
+            "3.12.3",
+            "3.12.14",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.504+1",
+            "11.0.32+9",
+            "17.0.20+1",
+            "21.0.12+1",
+            "25.0.4+1"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.3",
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.3.6"
+          ]
+        },
+        {
+          "slug": "swift",
+          "available": true,
+          "sourceNames": [
+            "Swift"
+          ],
+          "versions": [
+            "6.3.3"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client",
+            "Docker Server"
+          ],
+          "versions": [
+            "28.0.4"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.37.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "2.38.2"
+          ]
+        },
+        {
+          "slug": "podman",
+          "available": true,
+          "sourceNames": [
+            "Podman"
+          ],
+          "versions": [
+            "4.9.3"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "3.21.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "minikube",
+          "available": true,
+          "sourceNames": [
+            "Minikube"
+          ],
+          "versions": [
+            "1.39.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "583.0.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "ansible",
+          "available": true,
+          "sourceNames": [
+            "Ansible"
+          ],
+          "versions": [
+            "2.21.3"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "3.31.6"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.16"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.82"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0"
+          ]
+        },
+        {
+          "slug": "postgresql",
+          "available": true,
+          "sourceNames": [
+            "PostgreSQL"
+          ],
+          "versions": [
+            "16.15"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46-0ubuntu0.24.04.4"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-24.04-arm64",
+      "name": "Ubuntu 24.04 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "ubuntu-24.04-arm"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "24.04.5 LTS",
+      "imageVersion": "20260907.118.1",
+      "sourcePath": "images/ubuntu/Ubuntu2404-Arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu/Ubuntu2404-Arm64-Readme.md",
+      "sourceSha256": "c0b572e486fd8d25aad8dbd53019365375238d23d90bc1e3d97d6f213c8945a9",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.21",
+            "3.11.16",
+            "3.12.3",
+            "3.12.14",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.504+1",
+            "11.0.32+9",
+            "17.0.20+1",
+            "21.0.12+1",
+            "25.0.4+1"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.3",
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.3.6"
+          ]
+        },
+        {
+          "slug": "swift",
+          "available": true,
+          "sourceNames": [
+            "Swift"
+          ],
+          "versions": [
+            "6.3.3"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client",
+            "Docker Server"
+          ],
+          "versions": [
+            "28.0.4"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.37.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "2.38.2"
+          ]
+        },
+        {
+          "slug": "podman",
+          "available": true,
+          "sourceNames": [
+            "Podman"
+          ],
+          "versions": [
+            "4.9.3"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "3.21.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "minikube",
+          "available": true,
+          "sourceNames": [
+            "Minikube"
+          ],
+          "versions": [
+            "1.39.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "583.0.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "ansible",
+          "available": true,
+          "sourceNames": [
+            "Ansible"
+          ],
+          "versions": [
+            "2.21.3"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "3.31.6"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.12"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0"
+          ]
+        },
+        {
+          "slug": "postgresql",
+          "available": true,
+          "sourceNames": [
+            "PostgreSQL"
+          ],
+          "versions": [
+            "16.15"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46-0ubuntu0.24.04.4"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-22.04",
+      "name": "Ubuntu 22.04",
+      "architecture": "x64",
+      "labels": [
+        "ubuntu-22.04"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "22.04.5 LTS",
+      "imageVersion": "20260907.292.1",
+      "sourcePath": "images/ubuntu/Ubuntu2204-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu/Ubuntu2204-Readme.md",
+      "sourceSha256": "f3bce22f10e370ff599363edc06c6ebb957a85dbd2b00afb7c3681deb3ad34e7",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.12",
+            "3.10.21",
+            "3.11.16",
+            "3.12.14",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.504+1",
+            "11.0.32+9",
+            "17.0.20+1",
+            "21.0.12+1",
+            "25.0.4+1"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.0.2p107",
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.1.2"
+          ]
+        },
+        {
+          "slug": "swift",
+          "available": true,
+          "sourceNames": [
+            "Swift"
+          ],
+          "versions": [
+            "6.3.3"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client",
+            "Docker Server"
+          ],
+          "versions": [
+            "28.0.4"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.37.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "2.38.2"
+          ]
+        },
+        {
+          "slug": "podman",
+          "available": true,
+          "sourceNames": [
+            "Podman"
+          ],
+          "versions": [
+            "3.4.4"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "3.21.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "minikube",
+          "available": true,
+          "sourceNames": [
+            "Minikube"
+          ],
+          "versions": [
+            "1.39.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "583.0.0"
+          ]
+        },
+        {
+          "slug": "terraform",
+          "available": true,
+          "sourceNames": [
+            "Terraform"
+          ],
+          "versions": [
+            "1.16.1"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "ansible",
+          "available": true,
+          "sourceNames": [
+            "Ansible"
+          ],
+          "versions": [
+            "2.17.14"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "3.31.6"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.16"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.82"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0"
+          ]
+        },
+        {
+          "slug": "postgresql",
+          "available": true,
+          "sourceNames": [
+            "PostgreSQL"
+          ],
+          "versions": [
+            "14.24"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46-0ubuntu0.22.04.4"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-22.04-arm64",
+      "name": "Ubuntu 22.04 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "ubuntu-22.04-arm"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "22.04.5 LTS",
+      "imageVersion": "20260907.126.1",
+      "sourcePath": "images/ubuntu/Ubuntu2204-Arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu/Ubuntu2204-Arm64-Readme.md",
+      "sourceSha256": "cf8a59f09cc94ba02873d9a31ab28e66b4e1f9679cf5c962e12dcc8dde78430d",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.12",
+            "3.10.21",
+            "3.11.16",
+            "3.12.14",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.504+1",
+            "11.0.32+9",
+            "17.0.20+1",
+            "21.0.12+1",
+            "25.0.4+1"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.0.2p107",
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.1.2"
+          ]
+        },
+        {
+          "slug": "swift",
+          "available": true,
+          "sourceNames": [
+            "Swift"
+          ],
+          "versions": [
+            "6.3.3"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client",
+            "Docker Server"
+          ],
+          "versions": [
+            "28.0.4"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.37.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "2.38.2"
+          ]
+        },
+        {
+          "slug": "podman",
+          "available": true,
+          "sourceNames": [
+            "Podman"
+          ],
+          "versions": [
+            "3.4.4"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "3.21.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "minikube",
+          "available": true,
+          "sourceNames": [
+            "Minikube"
+          ],
+          "versions": [
+            "1.39.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "583.0.0"
+          ]
+        },
+        {
+          "slug": "terraform",
+          "available": true,
+          "sourceNames": [
+            "Terraform"
+          ],
+          "versions": [
+            "1.16.1"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "ansible",
+          "available": true,
+          "sourceNames": [
+            "Ansible"
+          ],
+          "versions": [
+            "2.17.14"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "3.31.6"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.12"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0"
+          ]
+        },
+        {
+          "slug": "postgresql",
+          "available": true,
+          "sourceNames": [
+            "PostgreSQL"
+          ],
+          "versions": [
+            "14.24"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46-0ubuntu0.22.04.4"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-slim",
+      "name": "Ubuntu Slim",
+      "architecture": "x64",
+      "labels": [
+        "ubuntu-slim"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "24.04.4 LTS",
+      "imageVersion": "20260728.2.1",
+      "sourcePath": "images/ubuntu-slim/ubuntu-slim-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/ubuntu-slim/ubuntu-slim-Readme.md",
+      "sourceSha256": "c9c6afd9798470394896b2b1d54231e9f9cba1ea18f567d4f74b81776cafa01c",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "24.18.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.12.3"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.54.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.96.0"
+          ]
+        },
+        {
+          "slug": "docker",
+          "available": true,
+          "sourceNames": [
+            "Docker Client"
+          ],
+          "versions": [
+            "29.6.2"
+          ]
+        },
+        {
+          "slug": "docker-buildx",
+          "available": true,
+          "sourceNames": [
+            "Docker-Buildx"
+          ],
+          "versions": [
+            "0.35.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "5.3.1"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "1.2.835.0",
+            "2.36.9"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.6",
+            "2.88.0"
+          ]
+        },
+        {
+          "slug": "google-cloud-cli",
+          "available": true,
+          "sourceNames": [
+            "Google Cloud CLI"
+          ],
+          "versions": [
+            "577.0.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.4"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.16.0"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xcode-27",
+      "name": "Xcode 27",
+      "architecture": "arm64",
+      "labels": [
+        "xcode-27",
+        "xcode-27-xlarge"
+      ],
+      "lifecycle": "preview",
+      "osVersion": "macOS 27.0 (26A5406e)",
+      "imageVersion": "20260907.0173.1",
+      "sourcePath": "images/macos/xcode-27-arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/xcode-27-arm64-Readme.md",
+      "sourceSha256": "39f8ec0ad798eab86e8b94dd64417dc5dc24c389f6e4dea94a37efe1720cb253",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+101",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.424",
+            "9.0.102",
+            "9.0.203",
+            "9.0.317",
+            "10.0.103",
+            "10.0.203",
+            "10.0.302",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10-release-377"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.82",
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.19.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "macos-26",
+      "name": "macOS 26",
+      "architecture": "x64",
+      "labels": [
+        "macos-latest-large",
+        "macos-26-intel",
+        "macos-26-large"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "macOS 26.6.1 (25G76)",
+      "imageVersion": "20260824.0517.1",
+      "sourcePath": "images/macos/macos-26-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/macos-26-Readme.md",
+      "sourceSha256": "6935a8b7178443a5ee9481899da49e5afa827df151690eb22c8294bd61cc914e",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.19.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+9",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.7"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.424",
+            "9.0.102",
+            "9.0.203",
+            "9.0.317",
+            "10.0.103",
+            "10.0.203",
+            "10.0.302",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.9"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10-release-377"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.0"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.98.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.29"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.6",
+            "2.89.1"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.15.4"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.2"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "151.0.7922.138",
+            "151.0.7922.174"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "154.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.4"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.17.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "macos-26-arm64",
+      "name": "macOS 26 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "macos-latest",
+        "macos-26",
+        "macos-26-xlarge"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "macOS 26.6.2 (25G83)",
+      "imageVersion": "20260907.0351.1",
+      "sourcePath": "images/macos/macos-26-arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/macos-26-arm64-Readme.md",
+      "sourceSha256": "688dc6f11befc470dd78896f4b69f5956dd9cc3986287919a6b912d748b97f21",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+101",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.424",
+            "9.0.102",
+            "9.0.203",
+            "9.0.317",
+            "10.0.103",
+            "10.0.203",
+            "10.0.302",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10-release-377"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.82",
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.19.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "macos-15",
+      "name": "macOS 15",
+      "architecture": "x64",
+      "labels": [
+        "macos-15-large",
+        "macos-15-intel"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "macOS 15.7.9 (24G830)",
+      "imageVersion": "20260824.0482.1",
+      "sourcePath": "images/macos/macos-15-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/macos-15-Readme.md",
+      "sourceSha256": "1de4b226036b0d24fca39de51eea4c44285b336dfd3b1db2056bcf0aca639f23",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.19.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.21",
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+9",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.7"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.424",
+            "9.0.102",
+            "9.0.203",
+            "9.0.317",
+            "10.0.103",
+            "10.0.203",
+            "10.0.302",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.9"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10-release-377"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.0"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.98.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.29"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.6",
+            "2.89.1"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.15.4"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.2"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "151.0.7922.138",
+            "151.0.7922.174"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "154.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.4"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "macos-15-arm64",
+      "name": "macOS 15 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "macos-15",
+        "macos-15-xlarge"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "macOS 15.7.9 (24G830)",
+      "imageVersion": "20260907.0337.1",
+      "sourcePath": "images/macos/macos-15-arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/macos-15-arm64-Readme.md",
+      "sourceSha256": "a7d3d1445a726faf0ad548ff7906f6cb49df7ad29144666f9c27d79450079c03",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+101",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.424",
+            "9.0.102",
+            "9.0.203",
+            "9.0.317",
+            "10.0.103",
+            "10.0.203",
+            "10.0.302",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10-release-377"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.8",
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.82",
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "macos-14",
+      "name": "macOS 14",
+      "architecture": "x64",
+      "labels": [
+        "macos-14-large"
+      ],
+      "lifecycle": "deprecated",
+      "osVersion": "macOS 14.8.7 (23J520)",
+      "imageVersion": "20260629.0276.1",
+      "sourcePath": "images/macos/macos-14-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/macos-14-Readme.md",
+      "sourceSha256": "f411a4e4a2f256745960fbae2c3a07aacc2b4ecbbf7220d2d779ec293bfa3b3e",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.1",
+            "24.18.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.20",
+            "3.11.9",
+            "3.12.10",
+            "3.13.14",
+            "3.14.6"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.492+9",
+            "11.0.31+11",
+            "17.0.19+10",
+            "21.0.11+10.0",
+            "25.0.3+9.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.11",
+            "1.26.4"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.11",
+            "3.4.9",
+            "4.0.5"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.422",
+            "9.0.102",
+            "9.0.203",
+            "9.0.315",
+            "10.0.103",
+            "10.0.203",
+            "10.0.301"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.7"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.0-release-281"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.96.0"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.54.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.95.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.35.11"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.5",
+            "2.87.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.15.4"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.3.4"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.1.1"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.6.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "149.0.7827.155",
+            "149.0.7827.201"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "152.0.3"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.3"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "macos-14-arm64",
+      "name": "macOS 14 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "macos-14",
+        "macos-14-xlarge"
+      ],
+      "lifecycle": "deprecated",
+      "osVersion": "macOS 14.8.9 (23J631)",
+      "imageVersion": "20260831.0302.1",
+      "sourcePath": "images/macos/macos-14-arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/macos/macos-14-arm64-Readme.md",
+      "sourceSha256": "6361d85c8d14d486842c5f0b6be2eb4b04e396177d6ceaf6cf605109258f0612",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "11.0.32+101",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.7"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.101",
+            "8.0.204",
+            "8.0.303",
+            "8.0.424",
+            "9.0.102",
+            "9.0.203",
+            "9.0.317",
+            "10.0.103",
+            "10.0.203",
+            "10.0.302",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10-release-377"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.0"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.8.0"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.98.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.34"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "1.0.7",
+            "2.89.1"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7.1"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.64",
+            "152.0.7977.65"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "154.0.1"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.4"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows-2025-vs2026",
+      "name": "Windows Server 2025",
+      "architecture": "x64",
+      "labels": [
+        "windows-latest",
+        "windows-2025",
+        "windows-2025-vs2026"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "10.0.26100 Build 33296",
+      "imageVersion": "20260907.229.1",
+      "sourcePath": "images/windows/Windows2025-VS2026-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/windows/Windows2025-VS2026-Readme.md",
+      "sourceSha256": "eb5c9f5f43b41def440059077ef5354c5732c5a5f682c963105d4904e6752c1f",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.11",
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.504+1",
+            "11.0.32+101",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.10"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "2.40.3"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "4.1.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.16"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows-2022",
+      "name": "Windows Server 2022",
+      "architecture": "x64",
+      "labels": [
+        "windows-2022"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "10.0.20348 Build 5499",
+      "imageVersion": "20260907.297.1",
+      "sourcePath": "images/windows/Windows2022-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/windows/Windows2022-Readme.md",
+      "sourceSha256": "2d0afae5e8117b57ff64f3fe66a338120e38ef414fcc861b9993809f129b5a09",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.10.11",
+            "3.11.9",
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "8.0.504+1",
+            "11.0.32+101",
+            "17.0.20+101",
+            "21.0.12+101.0",
+            "25.0.4+101.0"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.2.11",
+            "3.3.12",
+            "3.4.10",
+            "4.0.6"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.5.10"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "docker-compose",
+          "available": true,
+          "sourceNames": [
+            "Docker Compose"
+          ],
+          "versions": [
+            "2.40.3"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "4.1.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "3.31.6"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.16"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "10.9.8"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows-11-arm64",
+      "name": "Windows 11 Arm64",
+      "architecture": "arm64",
+      "labels": [
+        "windows-11-arm"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "10.0.26200 Build 9168",
+      "imageVersion": "20260906.161.1",
+      "sourcePath": "images/windows/Windows11-Arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/windows/Windows11-Arm64-Readme.md",
+      "sourceSha256": "af13873f9c07b92f72a42e8cd4a3ab8d190784aee3366bc3427447bc9ba01914",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "21.0.12+101.0",
+            "23.0.2+7"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.4.10"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "6.0.136",
+            "6.0.203",
+            "6.0.321",
+            "6.0.428",
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.4.25"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.10"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "4.1.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.16"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.19.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows-11-vs2026-arm64",
+      "name": "Windows 11 Arm64 with Visual Studio 2026",
+      "architecture": "arm64",
+      "labels": [
+        "windows-11-vs2026-arm"
+      ],
+      "lifecycle": "ga",
+      "osVersion": "10.0.26200 Build 9168",
+      "imageVersion": "20260907.151.1",
+      "sourcePath": "images/windows/Windows11-VS2026-Arm64-Readme.md",
+      "sourceUrl": "https://github.com/actions/runner-images/blob/bac22751eb7d886e12c6063685275299469e9e5b/images/windows/Windows11-VS2026-Arm64-Readme.md",
+      "sourceSha256": "4b8334de10050abff66326702fdabfa2d85e626bd94065c307dd2b985fe2037e",
+      "tools": [
+        {
+          "slug": "nodejs",
+          "available": true,
+          "sourceNames": [
+            "Node.js"
+          ],
+          "versions": [
+            "22.23.2",
+            "24.20.0"
+          ]
+        },
+        {
+          "slug": "python",
+          "available": true,
+          "sourceNames": [
+            "Python"
+          ],
+          "versions": [
+            "3.12.10",
+            "3.13.15",
+            "3.14.7"
+          ]
+        },
+        {
+          "slug": "java",
+          "available": true,
+          "sourceNames": [
+            "Java"
+          ],
+          "versions": [
+            "21.0.12+101.0",
+            "23.0.2+7"
+          ]
+        },
+        {
+          "slug": "go",
+          "available": true,
+          "sourceNames": [
+            "Go"
+          ],
+          "versions": [
+            "1.24.13",
+            "1.25.14",
+            "1.26.8"
+          ]
+        },
+        {
+          "slug": "ruby",
+          "available": true,
+          "sourceNames": [
+            "Ruby"
+          ],
+          "versions": [
+            "3.4.10"
+          ]
+        },
+        {
+          "slug": "dotnet-sdk",
+          "available": true,
+          "sourceNames": [
+            ".NET Core SDK"
+          ],
+          "versions": [
+            "6.0.136",
+            "6.0.203",
+            "6.0.321",
+            "6.0.428",
+            "8.0.130",
+            "8.0.206",
+            "8.0.319",
+            "8.0.424",
+            "9.0.120",
+            "9.0.205",
+            "9.0.317",
+            "10.0.111",
+            "10.0.204",
+            "10.0.303",
+            "10.0.400"
+          ]
+        },
+        {
+          "slug": "php",
+          "available": true,
+          "sourceNames": [
+            "PHP"
+          ],
+          "versions": [
+            "8.4.25"
+          ]
+        },
+        {
+          "slug": "kotlin",
+          "available": true,
+          "sourceNames": [
+            "Kotlin"
+          ],
+          "versions": [
+            "2.4.20"
+          ]
+        },
+        {
+          "slug": "rust",
+          "available": true,
+          "sourceNames": [
+            "Rust"
+          ],
+          "versions": [
+            "1.98.1"
+          ]
+        },
+        {
+          "slug": "git",
+          "available": true,
+          "sourceNames": [
+            "Git"
+          ],
+          "versions": [
+            "2.55.0",
+            "3.7.1"
+          ]
+        },
+        {
+          "slug": "github-cli",
+          "available": true,
+          "sourceNames": [
+            "GitHub CLI"
+          ],
+          "versions": [
+            "2.100.0"
+          ]
+        },
+        {
+          "slug": "helm",
+          "available": true,
+          "sourceNames": [
+            "Helm"
+          ],
+          "versions": [
+            "4.1.4"
+          ]
+        },
+        {
+          "slug": "kubectl",
+          "available": true,
+          "sourceNames": [
+            "Kubectl"
+          ],
+          "versions": [
+            "1.37.0"
+          ]
+        },
+        {
+          "slug": "aws-cli",
+          "available": true,
+          "sourceNames": [
+            "AWS CLI"
+          ],
+          "versions": [
+            "2.36.40"
+          ]
+        },
+        {
+          "slug": "azure-cli",
+          "available": true,
+          "sourceNames": [
+            "Azure CLI"
+          ],
+          "versions": [
+            "2.90.0"
+          ]
+        },
+        {
+          "slug": "packer",
+          "available": true,
+          "sourceNames": [
+            "Packer"
+          ],
+          "versions": [
+            "1.16.0"
+          ]
+        },
+        {
+          "slug": "pulumi",
+          "available": true,
+          "sourceNames": [
+            "Pulumi"
+          ],
+          "versions": [
+            "3.261.0"
+          ]
+        },
+        {
+          "slug": "cmake",
+          "available": true,
+          "sourceNames": [
+            "CMake",
+            "Cmake"
+          ],
+          "versions": [
+            "4.4.3"
+          ]
+        },
+        {
+          "slug": "bazel",
+          "available": true,
+          "sourceNames": [
+            "Bazel",
+            "bazel"
+          ],
+          "versions": [
+            "9.2.0"
+          ]
+        },
+        {
+          "slug": "gradle",
+          "available": true,
+          "sourceNames": [
+            "Gradle"
+          ],
+          "versions": [
+            "9.7"
+          ]
+        },
+        {
+          "slug": "maven",
+          "available": true,
+          "sourceNames": [
+            "Maven"
+          ],
+          "versions": [
+            "3.9.16"
+          ]
+        },
+        {
+          "slug": "google-chrome",
+          "available": true,
+          "sourceNames": [
+            "Google Chrome"
+          ],
+          "versions": [
+            "152.0.7977.83"
+          ]
+        },
+        {
+          "slug": "firefox",
+          "available": true,
+          "sourceNames": [
+            "Mozilla Firefox"
+          ],
+          "versions": [
+            "155.0.1"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "available": true,
+          "sourceNames": [
+            "MySQL"
+          ],
+          "versions": [
+            "8.0.46.0"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "available": true,
+          "sourceNames": [
+            "PowerShell"
+          ],
+          "versions": [
+            "7.6.5"
+          ]
+        },
+        {
+          "slug": "npm",
+          "available": true,
+          "sourceNames": [
+            "Npm",
+            "npm"
+          ],
+          "versions": [
+            "11.19.0"
+          ]
+        },
+        {
+          "slug": "yarn",
+          "available": true,
+          "sourceNames": [
+            "Yarn"
+          ],
+          "versions": [
+            "1.22.22"
+          ]
+        },
+        {
+          "slug": "jq",
+          "available": true,
+          "sourceNames": [
+            "jq"
+          ],
+          "versions": [
+            "1.8.1"
+          ]
+        }
+      ]
+    }
+  ]
+}

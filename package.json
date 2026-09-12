@@ -1,0 +1,29 @@
+{
+  "name": "github-actions-tool-index-probe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch-source.mjs",
+    "normalize": "node scripts/normalize.mjs",
+    "validate": "node scripts/validate-data.mjs",
+    "generate": "node scripts/generate-probe.mjs",
+    "refresh": "npm run fetch && npm run normalize && npm run validate && npm run generate",
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "test": "node --test tests/*.check.mjs",
+    "qa": "node scripts/qa-build.mjs",
+    "pipeline": "npm run refresh && npm run typecheck && npm test && npm run build && npm run qa"
+  },
+  "dependencies": {
+    "astro": "7.3.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "typescript": "6.0.3"
+  }
+}
