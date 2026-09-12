@@ -22,9 +22,9 @@
     "verificationMethod": "HTML_TAG",
     "verifiedDate": "2026-09-12",
     "sitemapUrl": "https://volaga17.github.io/github-actions-software-index/sitemap.xml",
-    "sitemapStatus": "SUBMITTED_FETCH_PENDING",
+    "sitemapStatus": "SUBMITTED_FETCH_ERROR",
     "sitemapSubmittedDate": "2026-09-12",
-    "sitemapDetail": "Google accepted the submission, then reported that it could not yet read the newly deployed sitemap; direct public checks return HTTP 200 and valid XML.",
+    "sitemapDetail": "Google accepted both submission attempts, then reported that it could not read the newly deployed sitemap; direct public checks return HTTP 200 and valid XML.",
     "blockers": []
   },
   "build": {
