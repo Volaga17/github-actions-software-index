@@ -34,3 +34,5 @@ The site includes privacy-neutral metric hooks (`data-metric="OUTBOUND_SOURCE_CL
 ## Data interpretation
 
 “Listed” means an exact configured source name and version were found in the pinned official manifest. “Not listed” is not a claim that a tool cannot be installed during a job. Every row links to its commit-pinned source.
+
+Third-party attribution is preserved in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).

@@ -7,6 +7,7 @@ import { readJson } from "./lib/files.mjs";
 const root = fileURLToPath(new URL("..", import.meta.url));
 const dist = join(root, "dist");
 const probe = await readJson(join(root, "src", "data", "probe.json"));
+const configuredBase = (process.env.BASE_PATH ?? "/").replace(/\/$/, "");
 
 async function filesUnder(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -20,8 +21,11 @@ async function filesUnder(directory) {
 }
 
 function localTarget(href) {
-  const path = href.split("#")[0].split("?")[0];
+  let path = href.split("#")[0].split("?")[0];
   if (!path || !path.startsWith("/")) return null;
+  if (configuredBase && (path === configuredBase || path.startsWith(`${configuredBase}/`))) {
+    path = path.slice(configuredBase.length) || "/";
+  }
   if (path === "/") return join(dist, "index.html");
   if (/\.[a-z0-9]+$/i.test(path)) return join(dist, path);
   return join(dist, path, "index.html");

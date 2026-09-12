@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/urls";
 ---
 
 <BaseLayout title="Page not found — Runner Image Index" description="The requested tool page does not exist in this 30-page Probe." canonicalPath="/404/">
@@ -7,6 +8,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <p class="eyebrow">404</p>
     <h1>That tool isn’t in this Probe.</h1>
     <p>The initial index is deliberately capped at 30 tools until real search demand is observed.</p>
-    <a class="button-link" href="/">Browse selected tools</a>
+    <a class="button-link" href={withBase("/")}>Browse selected tools</a>
   </section>
 </BaseLayout>

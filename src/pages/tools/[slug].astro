@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import probe from "../../data/probe.json";
+import { withBase } from "../../lib/urls";
 
 export const getStaticPaths = (() => probe.tools.map((tool) => ({
   params: { slug: tool.slug },
@@ -21,7 +22,7 @@ const description = `${tool.canonicalName} is listed on ${tool.listedImageCount}
 
 <BaseLayout title={title} description={description} canonicalPath={`/tools/${tool.slug}/`}>
   <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <a href="/">Tools</a><span aria-hidden="true">/</span><span aria-current="page">{tool.canonicalName}</span>
+    <a href={withBase("/")}>Tools</a><span aria-hidden="true">/</span><span aria-current="page">{tool.canonicalName}</span>
   </nav>
 
   <article>
@@ -89,7 +90,7 @@ const description = `${tool.canonicalName} is listed on ${tool.listedImageCount}
       <p>Canonical name: <strong>{tool.canonicalName}</strong>. Matched source names: {[...new Set(listed.flatMap((row) => row.sourceNames))].join(", ")}. Aliases used only for discovery: {tool.aliases.length ? tool.aliases.join(", ") : "none"}. Facts were parsed from GitHub’s MIT-licensed manifests; no third-party inventory was used.</p>
       <div class="link-row">
         <a class="text-link" href={probe.source.repositoryUrl} rel="external" data-metric="OUTBOUND_SOURCE_CLICK">Official repository ↗</a>
-        <a class="text-link" href="/methodology/">Methodology →</a>
+        <a class="text-link" href={withBase("/methodology/")}>Methodology →</a>
       </div>
     </section>
 
@@ -98,7 +99,7 @@ const description = `${tool.canonicalName} is listed on ${tool.listedImageCount}
         <p class="eyebrow">Same family</p>
         <h2 id="related-title">Related tools</h2>
         <div class="related-links">
-          {tool.relatedTools.map((related) => <a href={`/tools/${related.slug}/`}>{related.canonicalName} →</a>)}
+          {tool.relatedTools.map((related) => <a href={withBase(`/tools/${related.slug}/`)}>{related.canonicalName} →</a>)}
         </div>
       </section>
     )}

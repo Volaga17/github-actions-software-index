@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import probe from "../data/probe.json";
+import { withBase } from "../lib/urls";
 
 interface Props {
   title: string;
@@ -9,7 +10,7 @@ interface Props {
 }
 
 const { title, description, canonicalPath } = Astro.props;
-const canonical = new URL(canonicalPath, Astro.site);
+const canonical = new URL(withBase(canonicalPath), Astro.site);
 const verification = import.meta.env.GOOGLE_SITE_VERIFICATION;
 ---
 
@@ -23,7 +24,7 @@ const verification = import.meta.env.GOOGLE_SITE_VERIFICATION;
     <meta name="theme-color" content="#07111f" />
     {verification && <meta name="google-site-verification" content={verification} />}
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={probe.seo.siteName} />
     <meta property="og:title" content={title} />
@@ -33,13 +34,13 @@ const verification = import.meta.env.GOOGLE_SITE_VERIFICATION;
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Runner Image Index home">
+      <a class="brand" href={withBase("/")} aria-label="Runner Image Index home">
         <span class="brand-mark" aria-hidden="true">R/</span>
         <span>Runner Image Index</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="/">Tools</a>
-        <a href="/methodology/">Methodology</a>
+        <a href={withBase("/")}>Tools</a>
+        <a href={withBase("/methodology/")}>Methodology</a>
       </nav>
     </header>
     <main>
